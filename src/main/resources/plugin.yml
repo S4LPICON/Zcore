@@ -1,0 +1,8 @@
+name: Zcore
+version: '1.0-SNAPSHOT'
+main: com.s4lpicon.Zcore
+api-version: '1.21'
+prefix: [ Zofrenic ]
+authors: [ S4LPICON ]
+description: Zcore Plugin!
+website: zofrenic.com

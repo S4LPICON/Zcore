@@ -5,8 +5,6 @@ import java.io.IOException;
 
 import org.jcodec.api.JCodecException;
 
-import com.s4lpicon.scenes.objets.Scene;
-
 /*Clase SceneBuilder 
  * 
  * 
@@ -17,35 +15,39 @@ import com.s4lpicon.scenes.objets.Scene;
 
 public class SceneBuilder {
     private File filePathOrigin;
-    private File filePathDetination;
+    private File filePathDestination;
     private int fps;
 
     public SceneBuilder(File filePathOrigin, File filePathOutput, int fps) {
-        this.filePathDetination = filePathOutput;
+        this.filePathDestination = filePathOutput;
         this.filePathOrigin = filePathOrigin;
-        this.filePathDetination = null;
         this.fps = fps;
     }
 
-    public Scene buildScene() throws IOException, JCodecException {
+    public boolean buildScene() throws IOException, JCodecException {
+
         extractFrames();
 
         // ya tengo los frames en la carpeta de salida, ahora tengo que crear la escena
-        Scene scene = new Scene(filePathDetination.getName(), null, fps);
 
         // Logic to build the scene using the provided file paths and fps
         System.out.println(
-                "Building scene from " + filePathOrigin + " to " + filePathDetination + " at " + fps + " fps.");
+                "Building scene from " + filePathOrigin + " to " + filePathDestination + " at " + fps + " fps.");
         // Simulate building process
-        return null; // Return true if successful, false otherwise
+        return true; // Return true if successful, false otherwise
     }
 
     public boolean extractFrames() throws IOException, JCodecException {
-        File framesFolder = new File(filePathDetination, "Zcore/scenes/scene_");
+        File framesFolder = new File(filePathDestination, "Zcore/scenes/scene_");
         if (!framesFolder.exists()) {
             framesFolder.mkdirs();
         }
-        VideoFrameExtractor.extractFrames(filePathOrigin, filePathDetination, 24.0);
+        VideoFrameExtractor.extractFrames(filePathOrigin, filePathDestination, 24.0);
+        return true;
+    }
+
+    public boolean organizeFrames() {
+
         return true;
     }
 }

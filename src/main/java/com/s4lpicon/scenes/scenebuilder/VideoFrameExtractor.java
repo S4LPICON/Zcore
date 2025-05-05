@@ -11,6 +11,14 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/* Clase VideoFrameExtractor 
+ * 
+ * * Esta clase se encarga de extraer frames de un video y guardarlos como imágenes PNG.
+ *  Utiliza la biblioteca JCodec para manejar la decodificación de video.
+ * es decir se le da la ruta de un video y se le da la ruta de salida donde se guardaran los frames
+ * y la cantidad de frames por segundo que se desea extraer.
+ */
+
 public class VideoFrameExtractor {
 
     public static void extractFrames(File videoFile, File outputDir, double fps) throws IOException, JCodecException {
@@ -38,11 +46,5 @@ public class VideoFrameExtractor {
         }
 
         System.out.println("Extraídos " + frameNumber + " frames a " + fps + " FPS.");
-    }
-
-    public static void main(String[] args) throws IOException, JCodecException {
-        File video = new File("video.mp4");
-        File output = new File("frames");
-        extractFrames(video, output, 24.0);
     }
 }

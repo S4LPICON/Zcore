@@ -1,3 +1,5 @@
 #Cantida de fotogramas por segundo de la animacion
 #Default: 24
 fps: 24
+#cantida de scenas actuales porfavor no modificar
+cant_scenes: 0

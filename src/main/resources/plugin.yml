@@ -1,8 +1,18 @@
 name: Zcore
-version: '1.0-SNAPSHOT'
+version: "1.0-SNAPSHOT"
 main: com.s4lpicon.Zcore
-api-version: '1.21'
-prefix: [ Zofrenic ]
-authors: [ S4LPICON ]
+api-version: "1.21"
+prefix: [Zofrenic]
+authors: [S4LPICON]
 description: Zcore Plugin!
 website: zofrenic.com
+
+commands:
+  scene:
+    description: Zcore Plugin!
+    usage: /zcore
+    aliases: [zc]
+    permission: zcore.command
+    permission-message: You do not have permission to use this command.
+    default: op
+    permission-default: true

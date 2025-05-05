@@ -21,7 +21,7 @@ public class ScenesManager {
     public ScenesManager(JavaPlugin plugin) {
         this.plugin = plugin;
         this.scenes = new HashMap<>();
-        this.sBuilder = new SceneBuilder(new File(plugin.getDataFolder(), "videoInput"),
+        this.sBuilder = new SceneBuilder(new File(plugin.getDataFolder(), "videoInput/video.mp4"),
                 new File(plugin.getDataFolder(), "outPut"), 24);
     }
 

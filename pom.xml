@@ -47,7 +47,8 @@
                 <version>3.3.0</version>
                 <configuration>
                     <finalName>${project.artifactId}</finalName>
-                    <outputDirectory>D:\</outputDirectory>
+                    <outputDirectory>
+                        D:\Zofrenic-Labs\Minecraft-Development\Servers\Servidor-Pruebas\plugins</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>

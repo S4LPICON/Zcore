@@ -1,18 +1,13 @@
 name: Zcore
 version: "1.0-SNAPSHOT"
 main: com.s4lpicon.Zcore
-api-version: "1.21"
-prefix: [Zofrenic]
+api-version: "1.21" # o la versión exacta que uses en tu Spigot/Paper
+prefix: Zofrenic
 authors: [S4LPICON]
 description: Zcore Plugin!
-website: zofrenic.com
+website: https://zofrenic.com
 
 commands:
   scene:
-    description: Zcore Plugin!
-    usage: /zcore
-    aliases: [zc]
-    permission: zcore.command
-    permission-message: You do not have permission to use this command.
-    default: op
-    permission-default: true
+    description: Control de scenas
+    usage: /scene start <id>

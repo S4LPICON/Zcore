@@ -47,8 +47,7 @@
                 <version>3.3.0</version>
                 <configuration>
                     <finalName>${project.artifactId}</finalName>
-                    <outputDirectory>C:\Users\S4LPI\OneDrive\Documentos\.MCZOFRENIC STUDIOS\Servidor
-                        Pruebas\plugins</outputDirectory>
+                    <outputDirectory>D:\</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
